@@ -64,6 +64,6 @@ clinfo                        # now works and returns 1 platform: Intel(R), Open
 Compiling, building and runing CG-lab4 should also work.
 
 ## Other Linux distros
-Check out the first paragraph in the [FAQ](https://github.com/intel/compute-runtime/blob/master/FAQ.md) of the Intel runtimes repository states. It elaborates on the supported OS's.
+Check out the first paragraph in the [FAQ](https://github.com/intel/compute-runtime/blob/master/FAQ.md) of the Intel runtimes repository. It elaborates on the supported OS's.
 
 _I have not tested this. Did the instructions above work for you, or not?_
