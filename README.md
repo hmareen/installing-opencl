@@ -60,7 +60,8 @@ cmake -D CMAKE_PREFIX_PATH=/absolute/path/to/OpenCL-Headers/install -D CMAKE_INS
 cmake --build ./OpenCL-ICD-Loader/build --target install
 
 # idem "OpenCL-CLHPP"
-cmake -D CMAKE_PREFIX_PATH="/absolute/path/to/OpenCL-Headers/install;/absolute/path/to/OpenCL-ICD-Loader/install" -D CMAKE_INSTALL_PREFIX=./OpenCL-CLHPP/install -S ./OpenCL-CLHPP -B ./OpenCL-CLHPP/build 
+# to not require Ruby, I added "-D BUILD_TESTING=OFF" at the end
+cmake -D CMAKE_PREFIX_PATH="/absolute/path/to/OpenCL-Headers/install;/absolute/path/to/OpenCL-ICD-Loader/install" -D CMAKE_INSTALL_PREFIX=./OpenCL-CLHPP/install -S ./OpenCL-CLHPP -B ./OpenCL-CLHPP/build -D BUILD_TESTING=OFF
 cmake --build ./OpenCL-CLHPP/build --target install
 ```
 `clinfo` and CG-lab4 should now work, if `CMAKE_PREFIX_PATH` is correctly passed to CMake:
