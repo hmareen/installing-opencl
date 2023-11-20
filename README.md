@@ -14,7 +14,7 @@ For those with an Apple computer, OpenCL seems to work out of the box.
 
 ## Intel
 ### Windows
-_Has anyone tried this? I will be testing this out ASAP and update the readme._
+_Has anyone tried this? I will be testing this out ASAP and update the readme. Still working on it._
 
 According to [this webpage](https://www.intel.com/content/www/us/en/developer/articles/tool/opencl-drivers.html#proc-graph-section), when scrolling down to "Windows* OS":
 > Intel® Graphics Compute Runtime for OpenCL™ Driver is included with the Intel® Graphics Driver package for Windows* OS.
