@@ -2,6 +2,8 @@
 
 This document is geared toward getting OpenCL to work for CG-lab4. If you cannot get it to compile, build and run properly, even when following the instructions below, **leave an issue** [here](https://github.com/jlartois/installing-opencl/issues) **or send us an email**.
 
+**As of 20 November, 9PM, this document is complete (will not be updated unless requested)**, so if you require more info/help, leave an issue.
+
 ## NVidia
 For those with an NVidia GPU, installing the CUDA Toolkit (and rebooting) seems to suffice to get OpenCL to work.
 
