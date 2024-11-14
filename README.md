@@ -1,15 +1,42 @@
+# Installing and running OpenCL + building using CMake
+
+OpenCL typically has 3 possible modes of operation:
+
+1. (slow) running on the CPU (the chip emulates GFX hardware )
+
+2. (faster) running on an integrated GPU (Intel HD Graphics or AMD APU)
+
+3. (fastest) running on a dedicated GPU (ATI/AMD or Nvidia)
+
+You can test whether or not OpenCL is (already) operational on your machine through a program called `clinfo`. 
+
+Windows: the source code and a CMakeLists.txt can be found in the `clinfo` folder of this repo. Use CMake to create an executable (will fail if CMake cannot find OpenCL). 
+
+```
+Linux (Ubuntu): sudo apt-get install clinfo
+```
+
+```
+MacOS: brew install clinfo
+```
+
+OpenCL handles the diversity of platforms and hardware by using Installable Client Drivers (ICDs). An ICD provides hardware specific bindings which are loaded by an ICD loader. Think of it as a platform-independent module that is hardware vendor-specific, and that can be loaded by the platform OpenCL driver to execute hardware tasks. These ICDs have multiple iterations and versions. TL;DR, to install OpenCL, you need an ICD Loader and one (or more) ICDs that target your hardware. The sections below give instructions based on your OS and your device of choice (Nvidia, AMD or Intel GPU).
+
+You might need to search online for some help to get OpenCL up and running on your machine. If nothing seems to work and you cannot get OpenCL to run on your system, please contact us.
+
+
 # Getting OpenCL to work
 
 This document is geared toward getting OpenCL to work for CG-lab4. If you cannot get it to compile, build and run properly, even when following the instructions below, **leave an issue** [here](https://github.com/jlartois/installing-opencl/issues) **or send us an email**.
 
 ## NVidia
-For those with an NVidia GPU, installing the CUDA Toolkit (and rebooting) seems to suffice to get OpenCL to work.
+For those with an NVidia GPU, installing the CUDA Toolkit (and rebooting) suffices to get OpenCL to work. Check your CUDA version through `nvcc -V` on the command line.
 
 ## Apple
 For those with an Apple computer, OpenCL seems to work out of the box.
 
 ## AMD
-1. Windows: OpenCL seems to be supported through the Adrenalin driver. _Has anyone tried this?_
+1. Windows: OpenCL seems to be supported through the Adrenalin driver, according to [this webpage](https://www.khronos.org/opencl/resources): “for Windows-based platforms OpenCL support is shipped in the [Adrenalin](https://community.amd.com/t5/gaming/change-the-way-you-game-with-amd-radeon-software-adrenalin-2020/ba-p/414256) driver.”. So if OpenCL is not working, you need to update your Adrenalin driver and reboot. _Has anyone tried this?_
 2. Ubuntu 20.04 or 22.04: installing the ROCm packages seems to suffice. _Has anyone tried this?_
 
 ## Intel
