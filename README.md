@@ -26,6 +26,7 @@ You might need to search online for some help to get OpenCL up and running on yo
 
 
 # Getting OpenCL to work
+_Note: some links on this page only work when you copy-paste them._
 
 This document is geared toward getting OpenCL to work for CG-lab4. If you cannot get it to compile, build and run properly, even when following the instructions below, **leave an issue** [here](https://github.com/jlartois/installing-opencl/issues) **or send us an email**.
 
@@ -33,11 +34,11 @@ This document is geared toward getting OpenCL to work for CG-lab4. If you cannot
 For those with an NVidia GPU, installing the CUDA Toolkit (and rebooting) suffices to get OpenCL to work. Check your CUDA version through `nvcc -V` on the command line.
 
 ## Apple
-For those with an Apple computer, OpenCL seems to work out of the box.
+For those with an Apple computer, OpenCL seems to work out of the box. Caveat: in 2018, Apple deprecated OpenGL/OpenCL and proposed Metal 2. This means that applications using OpenGL/OpenCL can no longer be sold in the App-store. There is however still [an Apple page](https://developer.apple.com/opencl/) from July 2020 that describes how to use OpenCL.
 
 ## AMD
-1. Windows: OpenCL seems to be supported through the Adrenalin driver, according to [this webpage](https://www.khronos.org/opencl/resources): “for Windows-based platforms OpenCL support is shipped in the [Adrenalin](https://community.amd.com/t5/gaming/change-the-way-you-game-with-amd-radeon-software-adrenalin-2020/ba-p/414256) driver.”. So if OpenCL is not working, you need to update your Adrenalin driver and reboot. _Has anyone tried this?_
-2. Ubuntu 20.04 or 22.04: installing the ROCm packages seems to suffice. _Has anyone tried this?_
+1. Windows: OpenCL seems to be supported through the Adrenalin driver, according to [this webpage](https://github.com/KhronosGroup/Khronosdotorg/blob/main/api/opencl/resources.md): “for Windows-based platforms OpenCL support is shipped in the [Adrenalin](https://community.amd.com/t5/gaming/change-the-way-you-game-with-amd-radeon-software-adrenalin-2020/ba-p/414256) driver.”. So if OpenCL is not working, you need to update your Adrenalin driver and reboot. _Has anyone tried this?_
+2. Ubuntu 20.04 or 22.04: follow the instructions on how to install and use the [ROCm packages](https://rocm.docs.amd.com/en/latest/). If you are not using Ubuntu 20.04 or 22.04, check if the webpages mention your OS. _Has anyone tried this?_
 
 ## Intel
 ### Windows
