@@ -82,7 +82,7 @@ cmake --build ./OpenCL-Headers/build --target install
 
 # idem "OpenCL-ICD-Loader"
 # DONT FORGET TO CHANGE THE "/absolute/path/to" to the actual ABSOLUTE path
-cmake -D CMAKE_PREFIX_PATH=/absolute/path/to/OpenCL-Headers/install -D CMAKE_INSTALL_PREFIX=./OpenCL-ICD-Loader/install -S ./OpenCL-ICD-Loader -B ./OpenCL-ICD-Loader/build 
+cmake -D CMAKE_PREFIX_PATH="/absolute/path/to/OpenCL-Headers/install" -D CMAKE_INSTALL_PREFIX=./OpenCL-ICD-Loader/install -S ./OpenCL-ICD-Loader -B ./OpenCL-ICD-Loader/build 
 cmake --build ./OpenCL-ICD-Loader/build --target install
 
 # idem "OpenCL-CLHPP"
